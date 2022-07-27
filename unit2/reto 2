@@ -1,0 +1,85 @@
+def cliente (informacion:dict)-> dict:
+     dic =   {}
+     
+     dic["nombre"] = informacion["nombre"]
+     dic["edad"] = informacion["edad"]
+     
+     if informacion["edad"]>18:
+              dic["atraccion"] = " X-Treme"
+              dic["apto"]=True
+              dic["primer_ingreso"]=informacion["primer_ingreso"] 
+     
+              if  informacion["edad"] >18 and dic["primer_ingreso"]==True:
+                  dic["primer_ingreso"]=informacion["primer_ingreso"] 
+                  dic["total_boleta"] = 20000*.95
+    
+              else:
+                  informacion["edad"] >18 and informacion["primer_ingreso"]==False
+                  dic["primer_ingreso"]=informacion["primer_ingreso"] 
+                  dic["total_boleta"] =20000
+
+     
+
+     elif dic["edad"] >=15 and informacion["edad"] <=18:
+              dic["atraccion"]= "Carros chocones"
+              dic["apto"]=True
+              dic["primer_ingreso"]=informacion["primer_ingreso"] 
+
+      
+              if dic["edad"] >=15 and informacion["edad"] <=18 and informacion["primer_ingreso"]==True:
+                 dic["primer_ingreso"]=informacion["primer_ingreso"] 
+                 dic["total_boleta"] = 5000*.93
+
+              else: 
+                  dic["edad"] >=15 and informacion["edad"] <=18 and informacion["primer_ingreso"]==False
+                  dic["primer_ingreso"]=informacion["primer_ingreso"] 
+                  dic["total_boleta"] = 5000
+
+
+      
+     elif dic["edad"] >=7 and informacion["edad"] <15:
+              dic["atraccion"]= "Sillas voladora"
+              dic["apto"]=True
+              dic["primer_ingreso"]=informacion["primer_ingreso"] 
+
+
+              if dic["edad"] >=7 and informacion["edad"] <15 and informacion["primer_ingreso"]==True:
+                 dic["primer_ingreso"]=informacion["primer_ingreso"] 
+                 dic["total_boleta"] = 10000*.95
+
+              else:
+                  dic["edad"] >=7 and informacion["edad"] <15 and informacion["primer_ingreso"]==False
+                  dic["primer_ingreso"]=informacion["primer_ingreso"] 
+                  dic["total_boleta"] = 10000
+
+     
+     elif  informacion["edad"]<7:
+         dic["atraccion"]= "N/A"
+         dic["apto"]=False
+         dic["total_boleta"]= "N/A"
+      
+   
+     return dic
+
+
+
+
+dici1 ={ 'nombre': 'Johana Fernandez', 'edad': 20, 'atraccion': 'X-Treme','apto': True, 'primer_ingreso': True, 'total_boleta': 19000.0}
+dici2 ={'nombre': 'Johana Fernandez', 'edad': 20  , 'atraccion': 'X-Treme','apto': True, 'primer_ingreso': False, 'total_boleta': 20000}
+dici4 ={'nombre': 'Tatiana Suarez', 'edad': 17, 'atraccion': 'Carroschocones','apto': True, 'primer_ingreso': True, 'total_boleta':4650.0}
+dici5 = {'nombre': 'Tatiana Suarez', 'edad': 17, 'atraccion': 'Carroschocones','apto': True, 'primer_ingreso': False, 'total_boleta': 5000}
+dici6 = {'nombre': 'Gloria Suarez', 'edad': 3, 'atraccion': 'N/A', 'apto':False,'primer_ingreso': True, 'total_boleta': 'N/A'}
+dici7 ={'nombre': 'Tatiana Ruiz', 'edad': 8, 'atraccion': 'Sillas voladoras','apto':True, 'primer_ingreso': True, 'total_boleta': 9500.0}
+dici8 = {'nombre': 'Tatiana Ruiz', 'edad': 8, 'atraccion': 'Sillas voladoras','apto':True, 'primer_ingreso': False, 'total_boleta': 10000}
+print(cliente(dici1))
+print(cliente(dici2))
+print(cliente(dici4))
+print(cliente(dici5))
+print(cliente(dici6))
+print(cliente(dici7))
+print(cliente(dici8))
+
+
+
+
+

@@ -1,0 +1,30 @@
+
+#from regex import F
+
+#def CDT  ( usuario: str , capital: int , tiempo: int ):
+    #porcentaje_interes = 0.03
+    #if tiempo  > 2:    
+     #  valor_interes = ( capital * porcentaje_interes * tiempo ) / 12
+      # valor_total = valor_interes + capital 
+       #return  f"Para el usuario {usuario} La cantidad de dinero a recibir, según el monto inicial {capital} para un tiempo de {tiempo} meses es: {valor_total}" 
+    #else:       
+        #porcentaje_interes = 0.02
+        #valor_perder  = ( capital * porcentaje_interes )
+        #valor_total  = capital - valor_perder
+        #return f"Para el usuario {usuario} La cantidad de dinero a recibir, según el monto inicial {capital} para un tiempo de {tiempo} meses es: {valor_total}"
+    
+
+#print(CDT("AB1012",1000000,3))
+#print(CDT("ER3366",650000,2))
+
+
+
+
+
+d = {'a':10, 'b':1, 'c':22}
+t = list(d.items())
+print(t)
+t.sort()
+print(t)
+
+ 
